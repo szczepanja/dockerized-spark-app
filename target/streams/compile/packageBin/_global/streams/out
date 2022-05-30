@@ -1,9 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging /mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/scala-2.12/dockerized-spark-app_2.12-0.1.0-SNAPSHOT.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	log4j.properties[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/scala-2.12/classes/log4j.properties[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ReadFromDir$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/scala-2.12/classes/ReadFromDir$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	ReadFromDir.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/scala-2.12/classes/ReadFromDir.class[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
