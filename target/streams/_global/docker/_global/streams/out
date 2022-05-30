@@ -1,0 +1,51 @@
+[0m[[0m[0mdebug[0m] [0m[0mBuilding Dockerfile:[0m
+[0m[[0m[0mdebug[0m] [0m[0mFROM spark:v3.2.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mADD 0/dockerized-spark-app_2.12-0.1.0-SNAPSHOT.jar /opt/spark/jars/dockerized-spark-app_2.12-0.1.0-SNAPSHOT.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mUSER root[0m
+[0m[[0m[0mdebug[0m] [0m[0mENTRYPOINT ["\/opt\/spark\/bin\/spark-submit", "--conf", "spark.jars.ivy=\/tmp\/.ivy", "\/opt\/spark\/jars\/dockerized-spark-app_2.12-0.1.0-SNAPSHOT.jar"][0m
+[0m[[0m[0mdebug[0m] [0m[0mPreparing stage directory '/mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/docker'[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning command: 'docker build --no-cache=false --rm=true --pull=false --progress=plain --file Dockerfile /mnt/c/Users/a.szczepanik/Projekty/docker-project/docker/dockerized-spark-app/target/docker'[0m
+[0m[[0m[0minfo[0m] [0m[0m#1 [internal] load build definition from Dockerfile[0m
+[0m[[0m[0minfo[0m] [0m[0m#1 sha256:1c4520dc6d12b8dec6a23ad6e6bf9502d18c4d5a6e97e6020cb20734cd4dee52[0m
+[0m[[0m[0minfo[0m] [0m[0m#1 transferring dockerfile: 339B 0.0s done[0m
+[0m[[0m[0minfo[0m] [0m[0m#1 DONE 0.1s[0m
+[0m[[0m[0minfo[0m] [0m[0m#2 [internal] load .dockerignore[0m
+[0m[[0m[0minfo[0m] [0m[0m#2 sha256:d895151dd54d86a7f467832d1ce2d721929d3200785452c908f3f4b81bfd868b[0m
+[0m[[0m[0minfo[0m] [0m[0m#2 transferring context: 2B done[0m
+[0m[[0m[0minfo[0m] [0m[0m#2 DONE 0.1s[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 [internal] load metadata for docker.io/library/spark:v3.2.1[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 sha256:32f42c33e083263b50fde3da0cf7c3c4b7df515ccd66481834577bbe8bb2ea10[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 ...[0m
+[0m[[0m[0minfo[0m] [0m[0m#4 [auth] library/spark:pull token for registry-1.docker.io[0m
+[0m[[0m[0minfo[0m] [0m[0m#4 sha256:752fcaed25c06e917c912f7eda91396ba963e90a41865ccd17ddbe14f7817165[0m
+[0m[[0m[0minfo[0m] [0m[0m#4 DONE 0.0s[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 [internal] load metadata for docker.io/library/spark:v3.2.1[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 sha256:32f42c33e083263b50fde3da0cf7c3c4b7df515ccd66481834577bbe8bb2ea10[0m
+[0m[[0m[0minfo[0m] [0m[0m#3 ERROR: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed[0m
+[0m[[0m[0minfo[0m] [0m[0m------[0m
+[0m[[0m[0minfo[0m] [0m[0m > [internal] load metadata for docker.io/library/spark:v3.2.1:[0m
+[0m[[0m[0minfo[0m] [0m[0m------[0m
+[0m[[0m[0minfo[0m] [0m[0mfailed to solve with frontend dockerfile.v0: failed to create LLB definition: pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed[0m
+[0m[[0m[31merror[0m] [0m[0msbtdocker.DockerBuildException: Failed to build Docker image (exit code: 1)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerBuild$.build(DockerBuild.scala:167)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerBuild$.buildAndTag(DockerBuild.scala:96)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerBuild$.apply(DockerBuild.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerBuild$.apply(DockerBuild.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerSettings$.$anonfun$baseDockerSettings$1(DockerSettings.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbtdocker.DockerSettings$.$anonfun$baseDockerSettings$1$adapted(DockerSettings.scala:11)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.Function1.$anonfun$compose$1(Function1.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.std.Transform$$anon$4.work(Transform.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.work(Execute.scala:291)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)[0m
+[0m[[0m[31merror[0m] [0m[0m	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)[0m
+[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:834)[0m
+[0m[[0m[31merror[0m] [0m[0m([31mdocker[0m) sbtdocker.DockerBuildException: Failed to build Docker image (exit code: 1)[0m
